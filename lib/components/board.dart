@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class Board extends StatefulWidget {
@@ -250,7 +248,7 @@ class _BoardState extends State<Board> {
         player = "Player 2";
       }
       showDialog(
-        barrierDismissible: true,
+        barrierDismissible: false,
         context: context,
         builder: (context) {
           return AlertDialog(
@@ -274,7 +272,7 @@ class _BoardState extends State<Board> {
   void checkDraw() {
     if (turnCount == 9) {
       showDialog(
-        barrierDismissible: true,
+        barrierDismissible: false,
         context: context,
         builder: (context) {
           return AlertDialog(
